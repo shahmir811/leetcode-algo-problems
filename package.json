@@ -1,0 +1,17 @@
+{
+	"name": "rallycoding",
+	"version": "1.0.0",
+	"description": "Solving JS problems from rallycoding",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"jest": {
+		"testEnvironment": "node"
+	},
+	"author": "Shahmir Khan Jadoon",
+	"license": "ISC",
+	"devDependencies": {
+		"jest": "^27.5.1"
+	}
+}
