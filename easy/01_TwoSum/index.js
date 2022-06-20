@@ -18,16 +18,18 @@
 // Output: [0,1]
 
 const twoSum = (nums, target) => {
-	const result = [];
-
+	const previousValues = {};
 	for (let i = 0; i < nums.length; i++) {
-		let remainingNum = target - nums[i];
-
-		let index = nums.indexOf(remainingNum);
-		if (index > -1) result.push([i, index]);
+		const currentValue = nums[i];
+		const neededValue = target - currentValue;
+		if (previousValues[neededValue] != null) {
+			return [previousValues[neededValue], i];
+		} else {
+			previousValues[currentValue] = i;
+		}
 	}
 
-	return result[0];
+	return [];
 };
 
 module.exports = twoSum;
