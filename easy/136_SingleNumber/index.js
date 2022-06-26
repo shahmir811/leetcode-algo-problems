@@ -14,6 +14,10 @@
 // Input: nums = [4, 1, 2, 1, 2];
 // Output: 4;
 
+// Below code has:
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
 const singleNumber = nums => {
 	const values = {};
 
