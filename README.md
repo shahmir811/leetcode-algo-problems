@@ -55,6 +55,7 @@ jest problem/test --watch
 - 345 [Reverse Vowels Of A String](https://leetcode.com/problems/reverse-vowels-of-a-string/)
 - 387 [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)
 - 412 [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)
+- 520 [Detect Capital](https://leetcode.com/problems/detect-capital/)
 - 2119 [A Number After a Double Reversal](https://leetcode.com/problems/a-number-after-a-double-reversal/)
 
 2 - Medium
