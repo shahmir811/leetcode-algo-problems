@@ -22,6 +22,10 @@
 // Input: nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2];
 // Output: true;
 
+// Following code has:
+// Time complexity: O(n)
+// Space complexity: O(n) // Number of key/value pairs in hashObj is equal to number of unique values in an array
+
 const containsDuplicate = nums => {
 	const hashObj = {};
 
