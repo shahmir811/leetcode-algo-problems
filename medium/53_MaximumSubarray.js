@@ -24,6 +24,10 @@
 // Input: nums = [5, 4, -1, 7, 8];
 // Output: 23;
 
+// Following code has:
+// Time complexity: O(n)
+// Space complexity: O(1)
+
 const maxSubArray = nums => {
 	let solution = nums[0];
 
