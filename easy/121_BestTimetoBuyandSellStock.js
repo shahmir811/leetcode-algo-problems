@@ -20,6 +20,10 @@
 // Input: prices = [2, 4, 1]
 // Output: 2
 
+// Following Code has:
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
 const maxProfit = prices => {
 	let maxProfit = 0;
 	let cheapestPrice = prices[0];

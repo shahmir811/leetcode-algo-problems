@@ -2,7 +2,7 @@
 // https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
 
 // EXPLANANTION:
-// https://www.youtube.com/watch?v=VSuZoj4YC1E&t=189s
+// https://youtu.be/fehixeGZY9k
 
 // STATEMENT
 // Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
@@ -26,21 +26,11 @@
 // Space Complexity: O(n)
 
 const lowestCommonAncestor = (root, p, q) => {
-	let result = null;
-
-	const dfs = node => {
-		if (!node) return false;
-
-		let left = dfs(node.left);
-		let right = dfs(node.right);
-
-		let current = node === p || node === q;
-
-		if (left + right + current >= 2) result = node;
-
-		return left || right || current;
-	};
-
-	dfs(root);
-	return result;
+	if (p.val < root.val && q.val < root.val) {
+		return lowestCommonAncestor(root.left, p, q);
+	} else if (p.val > root.val && q.val > root.val) {
+		return lowestCommonAncestor(root.right, p, q);
+	} else {
+		return root;
+	}
 };

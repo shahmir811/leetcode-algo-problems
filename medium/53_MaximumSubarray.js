@@ -1,6 +1,9 @@
 // Problem link:
 // https://leetcode.com/problems/maximum-subarray/description/
 
+// EXPLANATION:
+// https://www.youtube.com/watch?v=WdK1Uhsza_I
+
 // STATEMENT
 // Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum
 // and return its sum.
