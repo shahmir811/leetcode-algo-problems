@@ -1,6 +1,16 @@
 // PROBLEM LINK:
 // https://leetcode.com/problems/roman-to-integer/
 
+// EXPLANANTION:
+// https://youtu.be/CwhpILAlfjg
+
+// STATEMENT
+// Roman to Integer Conversion
+
+// Following Code has:
+// Time Complexity: O(1)
+// Space Complexity: O(1)
+
 const romanToInt = s => {
 	const map = {
 		I: 1,
@@ -12,22 +22,18 @@ const romanToInt = s => {
 		M: 1000,
 	};
 
-	let result = 0;
-	let length = s.length;
-	let i = 0;
+	let total = 0;
 
-	while (i < length) {
-		const current = s[i];
-		const next = s[i + 1];
+	for (let i = 0; i < s.length; i++) {
+		let current = s[i];
+		let next = s[i + 1];
 
-		if (map[next] > map[current]) {
-			const number = map[next] - map[current];
-			result += number;
-			i += 2;
+		if (map[current] < map[next]) {
+			total -= map[current];
 		} else {
-			result += map[current];
-			i++;
+			total += map[current];
 		}
 	}
-	return result;
+
+	return total;
 };
