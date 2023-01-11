@@ -2,7 +2,7 @@
 // https://leetcode.com/problems/validate-binary-search-tree/
 
 // EXPLANANTION:
-// https://www.udemy.com/course/50-problems/learn/lecture/21602890?start=30#overview
+// https://youtu.be/i1m-rywzw68
 
 // STATEMENT
 // Given the root of a binary tree, determine if it is a valid binary search tree (BST).
@@ -21,11 +21,16 @@
 // Output: false;
 
 // Following Code has:
-// Time Complexity: O(log n)
-// Space Complexity: O(1)
+// Time Complexity: O(n)
+// Space Complexity: O(n)
 
-const isValidBST = (root, min = -Infinity, max = Infinity) => {
-	if (!root) return true;
-	else if (root.val <= min || root.val >= max) return false;
-	else return isValidBST(root.left, min, root.val) && isValidBST(root.right, root.val, max);
+const isValidBST = root => {
+	const recursive = (root, min, max) => {
+		if (!root) return true;
+		if (root.val <= min || root.val >= max) return false;
+
+		return recursive(root.left, min, root.val) && recursive(root.right, root.val, max);
+	};
+
+	return recursive(root, -Infinity, Infinity);
 };
